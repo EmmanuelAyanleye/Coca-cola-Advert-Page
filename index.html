@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola Advert Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Coca-Cola</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Advert Section -->
+    <section class="advert-section container mt-5">
+        <div class="advert-media mb-4">
+            <img src="path-to-advert-image.jpg" alt="Coca-Cola Advert" class="img-fluid">
+        </div>
+        <div class="advert-caption">
+            <h1 class="advert-title">Coca-Cola: Open Happiness</h1>
+            <p class="advert-description">Experience the refreshing taste of Coca-Cola. Share a Coke, and bring happiness to every moment!</p>
+            <div class="advert-buttons mt-3">
+                <button class="btn btn-danger" onclick="likeAdvert()">Like (<span id="likeCount">0</span>)</button>
+                <button class="btn btn-secondary" onclick="dislikeAdvert()">Dislike (<span id="dislikeCount">0</span>)</button>
+                <button class="btn btn-primary" onclick="shareAdvert()">Share</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comment Section -->
+    <section class="comments-section container mt-5">
+        <h3>Comments</h3>
+        <div class="mb-3">
+            <input type="text" id="usernameInput" class="form-control" placeholder="Enter your name" />
+            <textarea class="form-control mt-2" id="commentInput" rows="3" placeholder="Write a comment..."></textarea>
+            <button class="btn btn-primary mt-2" onclick="postComment()">Post Comment</button>
+        </div>
+
+        <!-- Display Comments -->
+        <div id="commentsContainer" class="comments-container">
+            <!-- Comments will be dynamically loaded here -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2024 Coca-Cola Company. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
